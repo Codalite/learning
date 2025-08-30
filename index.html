@@ -16,7 +16,7 @@
                 <h4 class="brand-name">Brand Name</h4>
             </div>
             <button id="btn-toggle">≡</button>
-            <div class="nav-items ">
+            <div class="nav-items  " id="menu-items">
                 <ul class="nav-items-left">
                     <li class="nav-item"><a href="">Home</a></li>
                     <li class="nav-item"><a href="">Gallery</a></li>
@@ -100,7 +100,7 @@
             </ul>
         </aside>
     </main>
-<br>
+<hr>
     <footer>
         <div class="contact">
  <a href="" style="color: black;"> See more...</a>
@@ -112,6 +112,14 @@
         </div>
 
     </footer>
-
+    <script>
+        const nav_toggle_btn=document.getElementById("btn-toggle")
+        const menu=document.getElementById("menu-items")
+        const menu_c=document.querySelectorAll(".nav-items")[0]
+        
+        nav_toggle_btn.addEventListener("click",(evt)=>{
+            menu_c.classList.toggle("show-nav")
+        })
+    </script>
 </body>
 </html>
